@@ -4,19 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/newDatumFragmentView"
     tools:context=".ui.newdatum.NewDatumFragment">
 
     <TextView
-        android:id="@+id/text_dashboard"
+        android:id="@+id/newDatum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:text="Choose a data type to add:"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.367" />
+
+    <Button
+        android:id="@+id/addFlow"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="26dp"
+        android:enabled="true"
+        android:text="Add Flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newDatum"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/addSymptoms"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="16dp"
+        android:enabled="true"
+        android:text="Add Symptoms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addFlow"
+        app:layout_constraintVertical_bias="0.2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

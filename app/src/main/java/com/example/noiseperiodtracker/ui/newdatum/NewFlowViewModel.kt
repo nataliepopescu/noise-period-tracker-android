@@ -2,4 +2,6 @@ package com.example.noiseperiodtracker.ui.newdatum
 
 import androidx.lifecycle.ViewModel
 
-class NewDatumViewModel : ViewModel() {}
+class NewFlowViewModel : ViewModel() {
+    // TODO: Implement the ViewModel
+}
