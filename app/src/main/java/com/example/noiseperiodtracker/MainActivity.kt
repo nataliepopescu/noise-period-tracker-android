@@ -32,4 +32,12 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    external fun createStandaloneDevice()
+
+    companion object {
+        init {
+            System.loadLibrary("noise-kv")
+        }
+    }
 }

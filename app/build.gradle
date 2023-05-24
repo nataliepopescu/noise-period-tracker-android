@@ -1,11 +1,13 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'org.mozilla.rust-android-gradle.rust-android'
 }
 
 android {
     namespace 'com.example.noiseperiodtracker'
     compileSdk 33
+    ndkVersion "25.2.9519653"
 
     defaultConfig {
         applicationId "com.example.noiseperiodtracker"
@@ -49,4 +51,18 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+apply plugin: 'org.mozilla.rust-android-gradle.rust-android'
+
+cargo {
+    module = "../sequential-noise-kv"
+    libname = "noise_kv"
+    targets = ["x86_64", "x86", "arm", "arm64"]
+}
+
+tasks.whenTaskAdded { task ->
+    if ((task.name == 'javaPreCompileDebug' || task.name == 'javaPreCompileRelease')) {
+        task.dependsOn 'cargoBuild'
+    }
 }

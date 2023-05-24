@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/newDatumFragmentView"
     tools:context=".ui.newdatum.NewDatumFragment">
 
     <TextView
-        android:id="@+id/newDatum"
+        android:id="@+id/textview_new_datum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -23,7 +22,7 @@
         app:layout_constraintVertical_bias="0.367" />
 
     <Button
-        android:id="@+id/addFlow"
+        android:id="@+id/button_add_flow"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_gravity="start"
@@ -32,11 +31,11 @@
         android:text="Add Flow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/newDatum"
+        app:layout_constraintTop_toBottomOf="@id/textview_new_datum"
         app:layout_constraintVertical_bias="0.2" />
 
     <Button
-        android:id="@+id/addSymptoms"
+        android:id="@+id/button_add_symptoms"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_gravity="start"
@@ -45,7 +44,7 @@
         android:text="Add Symptoms"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addFlow"
+        app:layout_constraintTop_toBottomOf="@id/button_add_flow"
         app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

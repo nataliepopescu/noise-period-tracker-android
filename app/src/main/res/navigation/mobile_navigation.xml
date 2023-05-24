@@ -8,18 +8,34 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.noiseperiodtracker.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="Home Nav"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_newdatum"
+        android:id="@+id/navigation_new_datum"
         android:name="com.example.noiseperiodtracker.ui.newdatum.NewDatumFragment"
-        android:label="New Datum"
-        tools:layout="@layout/fragment_newdatum" />
+        android:label="New Datum Frag"
+        tools:layout="@layout/fragment_new_datum">
+
+        <!--<action
+            android:id="@+id/action_NewDatumFragment_to_NewFlowFragment"
+            app:destination="@id/navigation_new_flow" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_new_flow"
+        android:name="com.example.noiseperiodtracker.ui.newdatum.NewFlowFragment"
+        android:label="New Flow Frag"
+        tools:layout="@layout/fragment_new_flow">
+
+        <action
+            android:id="@+id/action_NewFlowFragment_to_NewDatumFragment"
+            app:destination="@id/navigation_new_datum" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_history"
         android:name="com.example.noiseperiodtracker.ui.history.HistoryFragment"
-        android:label="History"
+        android:label="History Nav"
         tools:layout="@layout/fragment_history" />
 </navigation>
